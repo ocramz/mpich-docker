@@ -1,0 +1,20 @@
+sudo: 
+  required
+
+language: 
+  c 
+
+services:
+  - docker
+
+#addons:
+#  apt:
+#    packages:
+#    - gfortran
+
+before_install:
+  # update Docker
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine mpich
+  
+  
