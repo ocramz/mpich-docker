@@ -23,5 +23,6 @@ before_install:
   
 script:
   - docker build -t ${DOCKER_NAME} .
+  - docker images
   
   
