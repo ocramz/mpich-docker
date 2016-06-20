@@ -26,4 +26,4 @@ echo "LogLevel DEBUG3" >> /etc/ssh/sshd_config
 /usr/sbin/sshd
 echo Started sshd service
 
-cat /var/log/sshd
+# cat /var/log/sshd
