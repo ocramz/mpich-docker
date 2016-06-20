@@ -18,7 +18,7 @@ before_install:
 
   
 script:
-  - make build
+  - make run
   - docker images
   
   
