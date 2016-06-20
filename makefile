@@ -26,4 +26,4 @@ push: build login
 	docker push $(TAG)
 
 run: build
-	docker run --rm -it ${TAG} /bin/bash
+	docker run --rm -it ${TAG} # /bin/bash
