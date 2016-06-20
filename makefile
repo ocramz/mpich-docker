@@ -12,6 +12,7 @@ help:
 	@echo "  login    to login to your docker account"
 	@echo "  push     to push the image to the docker registry"
 	@echo "  run      to run the container"
+	@echo "  run_bash to run /bin/bash in the container"
 
 build:
 	docker build -t $(TAG) .
@@ -27,3 +28,6 @@ push: build login
 
 run: build
 	docker run --rm -it ${TAG}
+
+run_bash: build
+	docker run --rm -it ${TAG} /bin/bash

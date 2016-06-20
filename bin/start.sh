@@ -19,6 +19,11 @@
 # # adduser docker sudo
 
 
+# debug-level info in syslog (/var/log/sshd)
+echo "LogLevel DEBUG3" >> /etc/ssh/sshd_config
+
 # Start the ssh service
-/usr/sbin/sshd -D
+/usr/sbin/sshd
 echo Started sshd service
+
+cat /var/log/sshd
