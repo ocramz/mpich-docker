@@ -1,12 +1,12 @@
 #!/bin/bash
 
-USER=mpiuser
+USER=mpiuser1
 
 # sshd daemon runs in /var/run/sshd 
 
 # Add user and generate a random password with 12 characters that includes at least one capital letter and number.
 DOCKER_PASSWORD=`pwgen -c -n -1 12`
-echo User: docker Password: $DOCKER_PASSWORD
+echo User: mpiuser1 Password: $DOCKER_PASSWORD
 DOCKER_ENCRYPYTED_PASSWORD=`perl -e 'print crypt('"$DOCKER_PASSWORD"', "aa"),"\n"'`
 
 useradd -m -d /home/${USER} -s /bin/bash -p $DOCKER_ENCRYPYTED_PASSWORD ${USER}
