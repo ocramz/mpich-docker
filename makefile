@@ -17,7 +17,7 @@ build:
 	docker build -t $(TAG) .
 
 rebuild:
-	docker build -no-cache -t $(TAG) .
+	docker build --no-cache -t $(TAG) .
 
 login:
 	docker login -u $(ACCOUNT)
